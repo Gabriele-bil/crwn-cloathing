@@ -1,12 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import { HomePage } from "./pages/homepage/homepage.component";
+import { Switch, Route } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
     <div>
-      <HomePage />
+      {/* <HomePage /> */}
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
     </div>
   );
 }
